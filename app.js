@@ -16,7 +16,7 @@ const canciones = [
         titulo:'PARIS',
         nombre:'Junior H',
         fuente:'https://www.dropbox.com/scl/fi/h4b1g56c9xtgktu0oh284/Junior-H-PARIS.mp3?rlkey=mzqjclf6r00w8yv03qu2vte93&st=3w9uz99h&dl=1',
-        portada:'img/paris.jpg'
+        portada:'img/PARIS.jpg'
     },
     {
         titulo:'Mia',
@@ -152,6 +152,7 @@ cancion.addEventListener('ended', () => {
 
 // Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
