@@ -13,6 +13,12 @@ const botonAdelante = document.querySelector('.controles button.adelante-control
 
 const canciones = [
       {
+        titulo:'En donde esta tu amor',
+        nombre:'Virlan Garcia',
+        fuente:'https://www.dropbox.com/scl/fi/tr3iasjaw1pcshm9y6e1j/En-Donde-Esta-Tu-Amor.mp3?rlkey=qeniqnjh5fw7wri1fphcw2v2e&st=7erd3go9&dl=1',
+        portada:'img/VIRLAN.jpg'
+    },
+      {
         titulo:'NO LO HICE BIEN',
         nombre:'Ariel Camacho',
         fuente:'https://www.dropbox.com/scl/fi/lwrgq0h7s2wteuxnd8x47/NO-LO-HICE-BIEN.mp3?rlkey=zw4fqtorm2g852wzuugbaow0d&st=2kyvh0pl&dl=1',
@@ -25,12 +31,6 @@ const canciones = [
         portada:'img/ARIEL.jpg'
     },
      {
-        titulo:'En donde esta tu amor',
-        nombre:'Vitlan Garcia',
-        fuente:'https://www.dropbox.com/scl/fi/tr3iasjaw1pcshm9y6e1j/En-Donde-Esta-Tu-Amor.mp3?rlkey=qeniqnjh5fw7wri1fphcw2v2e&st=7erd3go9&dl=1',
-        portada:'img/VIRLAN.jpg'
-    },
-    {
         titulo:'PARIS',
         nombre:'Junior H',
         fuente:'https://www.dropbox.com/scl/fi/h4b1g56c9xtgktu0oh284/Junior-H-PARIS.mp3?rlkey=mzqjclf6r00w8yv03qu2vte93&st=3w9uz99h&dl=1',
@@ -41,6 +41,12 @@ const canciones = [
         nombre:'Fuerza regida x Grupo frontera',
         fuente:'https://www.dropbox.com/scl/fi/2icslovtrfl4jusiaudvp/COQUETA.mp3?rlkey=6q7dshs1oa8t6k5p25r58ta0p&st=i9obwjxb&dl=1',
         portada:'img/AURORA.jpg'
+    },
+      {
+        titulo:'TULUM',
+        nombre:'PESO PLUMA',
+        fuente:'https://www.dropbox.com/scl/fi/40npbh7c645nakdw1pa5t/TULUM.mp3?rlkey=s8ucibsjmma59vfie7i3ppdp8&st=qtwv27ev&dl=1',
+        portada:'img/GENESIS.jpg'
     },
     {
         titulo:'Mia',
@@ -83,12 +89,6 @@ const canciones = [
         nombre:'Fuerza Regida x Grupo Frontera',
         fuente:'https://www.dropbox.com/scl/fi/hn7rs8myvwlql8uop7n81/AURORA.mp3?rlkey=sws24i9yzngj0e93ba48egb8y&st=i6w83cxf&dl=1',
         portada:'img/grupo_frontera.jpg'
-    },
-    {
-        titulo:'TULUM',
-        nombre:'PESO PLUMA',
-        fuente:'https://www.dropbox.com/scl/fi/40npbh7c645nakdw1pa5t/TULUM.mp3?rlkey=s8ucibsjmma59vfie7i3ppdp8&st=qtwv27ev&dl=1',
-        portada:'img/GENESIS.jpg'
     },
     {
         titulo:'INTRO',
@@ -176,6 +176,7 @@ cancion.addEventListener('ended', () => {
 
 // Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
