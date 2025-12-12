@@ -106,12 +106,11 @@ function actualizarInfoCancion(){
     cancion.src = canciones[indiceCancionActual].fuente;
     portada.src = canciones[indiceCancionActual].portada;
 
-    // 👇 Actualiza el fondo difuminado con fade
     const reproductor = document.querySelector('.Reproductor-de-musica');
     reproductor.style.setProperty('--portada-fondo', `url(${canciones[indiceCancionActual].portada})`);
 
     reproductor.classList.remove('fondo-activo');
-    void reproductor.offsetWidth; // truco para reiniciar transición
+    void reproductor.offsetWidth; 
     reproductor.classList.add('fondo-activo');
 }
 
@@ -167,15 +166,14 @@ controlAtras.addEventListener('click', ()=>{
     reproducirCancion();
 });
 
-// Al terminar una canción, pasa automáticamente a la siguiente
 cancion.addEventListener('ended', () => {
     indiceCancionActual = (indiceCancionActual + 1) % canciones.length;
     actualizarInfoCancion();
     reproducirCancion();
 });
 
-// Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
