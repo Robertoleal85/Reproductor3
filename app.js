@@ -12,11 +12,35 @@ const controlAtras = document.querySelector('.controles button.atras-control');
 const botonAdelante = document.querySelector('.controles button.adelante-control');
 
 const canciones = [
+      {
+        titulo:'NO LO HICE BIEN',
+        nombre:'Ariel Camacho',
+        fuente:'https://www.dropbox.com/scl/fi/lwrgq0h7s2wteuxnd8x47/NO-LO-HICE-BIEN.mp3?rlkey=zw4fqtorm2g852wzuugbaow0d&st=2kyvh0pl&dl=1',
+        portada:'img/Mia.jpg'
+    },
+     {
+        titulo:'Hablemos',
+        nombre:'Ariel Camacho',
+        fuente:'https://www.dropbox.com/scl/fi/tnxbp7v9avig2ne5j5f8m/HABLEMOS.mp3?rlkey=ssibyla4yr2ly3fsfklsgnh0b&st=pb045mu7&dl=1',
+        portada:'img/PARIS.jpg'
+    },
+     {
+        titulo:'En donde esta tu amor',
+        nombre:'Vitlan Garcia',
+        fuente:'https://www.dropbox.com/scl/fi/tr3iasjaw1pcshm9y6e1j/En-Donde-Esta-Tu-Amor.mp3?rlkey=qeniqnjh5fw7wri1fphcw2v2e&st=7erd3go9&dl=1',
+        portada:'img/PARIS.jpg'
+    },
     {
         titulo:'PARIS',
         nombre:'Junior H',
         fuente:'https://www.dropbox.com/scl/fi/h4b1g56c9xtgktu0oh284/Junior-H-PARIS.mp3?rlkey=mzqjclf6r00w8yv03qu2vte93&st=3w9uz99h&dl=1',
         portada:'img/PARIS.jpg'
+    },
+     {
+        titulo:'Coqueta',
+        nombre:'Fuerza regida x Grupo frontera',
+        fuente:'https://www.dropbox.com/scl/fi/2icslovtrfl4jusiaudvp/COQUETA.mp3?rlkey=6q7dshs1oa8t6k5p25r58ta0p&st=i9obwjxb&dl=1',
+        portada:'img/AURORA.jpg'
     },
     {
         titulo:'Mia',
@@ -152,6 +176,7 @@ cancion.addEventListener('ended', () => {
 
 // Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
