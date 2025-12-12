@@ -95,7 +95,7 @@ const canciones = [
         nombre:'Junior H',
         fuente:'https://www.dropbox.com/scl/fi/7t9hfdt3npy88a9rtgr6q/INTRO.mp3?rlkey=b9qz9e8hde9yz6sy6ibdquirw&st=rrgqi8a4&dl=1',
         portada:'img/SAD.jpg'
-    }
+    },
 ];
 
 let indiceCancionActual = 0;
@@ -176,6 +176,7 @@ cancion.addEventListener('ended', () => {
 
 // Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
