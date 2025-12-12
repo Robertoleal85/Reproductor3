@@ -16,19 +16,19 @@ const canciones = [
         titulo:'NO LO HICE BIEN',
         nombre:'Ariel Camacho',
         fuente:'https://www.dropbox.com/scl/fi/lwrgq0h7s2wteuxnd8x47/NO-LO-HICE-BIEN.mp3?rlkey=zw4fqtorm2g852wzuugbaow0d&st=2kyvh0pl&dl=1',
-        portada:'img/Mia.jpg'
+        portada:'img/ARIEL.jpg'
     },
      {
         titulo:'Hablemos',
         nombre:'Ariel Camacho',
         fuente:'https://www.dropbox.com/scl/fi/tnxbp7v9avig2ne5j5f8m/HABLEMOS.mp3?rlkey=ssibyla4yr2ly3fsfklsgnh0b&st=pb045mu7&dl=1',
-        portada:'img/PARIS.jpg'
+        portada:'img/ARIEL.jpg'
     },
      {
         titulo:'En donde esta tu amor',
         nombre:'Vitlan Garcia',
         fuente:'https://www.dropbox.com/scl/fi/tr3iasjaw1pcshm9y6e1j/En-Donde-Esta-Tu-Amor.mp3?rlkey=qeniqnjh5fw7wri1fphcw2v2e&st=7erd3go9&dl=1',
-        portada:'img/PARIS.jpg'
+        portada:'img/VIRLAN.jpg'
     },
     {
         titulo:'PARIS',
@@ -176,6 +176,7 @@ cancion.addEventListener('ended', () => {
 
 // Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
