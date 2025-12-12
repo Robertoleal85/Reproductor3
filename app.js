@@ -12,6 +12,12 @@ const controlAtras = document.querySelector('.controles button.atras-control');
 const botonAdelante = document.querySelector('.controles button.adelante-control');
 
 const canciones = [
+       {
+        titulo:'Hablemos',
+        nombre:'Ariel Camacho',
+        fuente:'https://www.dropbox.com/scl/fi/tnxbp7v9avig2ne5j5f8m/HABLEMOS.mp3?rlkey=ssibyla4yr2ly3fsfklsgnh0b&st=pb045mu7&dl=1',
+        portada:'img/ARIEL.jpg'
+    },
       {
         titulo:'En donde esta tu amor',
         nombre:'Virlan Garcia',
@@ -22,12 +28,6 @@ const canciones = [
         titulo:'NO LO HICE BIEN',
         nombre:'Ariel Camacho',
         fuente:'https://www.dropbox.com/scl/fi/lwrgq0h7s2wteuxnd8x47/NO-LO-HICE-BIEN.mp3?rlkey=zw4fqtorm2g852wzuugbaow0d&st=2kyvh0pl&dl=1',
-        portada:'img/ARIEL.jpg'
-    },
-     {
-        titulo:'Hablemos',
-        nombre:'Ariel Camacho',
-        fuente:'https://www.dropbox.com/scl/fi/tnxbp7v9avig2ne5j5f8m/HABLEMOS.mp3?rlkey=ssibyla4yr2ly3fsfklsgnh0b&st=pb045mu7&dl=1',
         portada:'img/ARIEL.jpg'
     },
      {
@@ -176,6 +176,7 @@ cancion.addEventListener('ended', () => {
 
 // Inicializa con la primera canción
 actualizarInfoCancion();
+
 
 
 
