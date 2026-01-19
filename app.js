@@ -16,7 +16,7 @@ const canciones = [
         titulo:'Hablemos',
         nombre:'Ariel Camacho',
         fuente:'https://www.dropbox.com/scl/fi/tnxbp7v9avig2ne5j5f8m/HABLEMOS.mp3?rlkey=ssibyla4yr2ly3fsfklsgnh0b&st=pb045mu7&dl=1',
-        portada:'img/ARIEL.jpg'
+        portada:'https://www.dropbox.com/scl/fi/fsxeqpuubxv66skbn4fcc/ARIEL.jpg?rlkey=siz0kjl3w94mp6l87xso28n1j&st=6bi9kuxm&dl=1'
     },
       {
         titulo:'En donde esta tu amor',
@@ -173,6 +173,89 @@ cancion.addEventListener('ended', () => {
 });
 
 actualizarInfoCancion();
+
+const searchInput = document.getElementById("searchInput");
+const songList = document.getElementById("songList");
+
+searchInput.addEventListener("input", function () {
+  const query = this.value.toLowerCase().trim();
+  songList.innerHTML = "";
+
+  if (query === "") return; 
+
+  const resultados = canciones.filter(cancion =>
+    cancion.titulo.toLowerCase().includes(query) ||
+    cancion.nombre.toLowerCase().includes(query)
+  );
+
+  if (resultados.length === 0) {
+    const mensaje = document.createElement("li");
+    mensaje.textContent = "Lo siento, no está disponible.";
+    mensaje.style.opacity = "0.6";
+    mensaje.style.fontStyle = "italic";
+    songList.appendChild(mensaje);
+    return;
+  }
+
+  resultados.forEach(song => {
+    const item = document.createElement("li");
+    item.textContent = `${song.titulo} - ${song.nombre}`;
+    item.onclick = () => {
+      indiceCancionActual = canciones.indexOf(song);
+      actualizarInfoCancion();
+      reproducirCancion();
+    };
+    songList.appendChild(item);
+  });
+});
+
+
+const controlVolumen = document.getElementById("controlVolumen");
+const iconoVolumen = document.getElementById("iconoVolumen");
+
+controlVolumen.addEventListener("input", function () {
+  cancion.volume = parseFloat(this.value); 
+
+  if (this.value == 0) {
+    iconoVolumen.classList.remove("bi-volume-up");
+    iconoVolumen.classList.add("bi-volume-mute-fill");
+  } else {
+    iconoVolumen.classList.remove("bi-volume-mute-fill");
+    iconoVolumen.classList.add("bi-volume-up");
+  }
+});
+
+iconoVolumen.addEventListener("click", function () {
+  if (cancion.volume > 0) {
+    cancion.volume = 0;
+    controlVolumen.value = 0;
+    iconoVolumen.classList.remove("bi-volume-up");
+    iconoVolumen.classList.add("bi-volume-mute-fill");
+  } else {
+    cancion.volume = 1;
+    controlVolumen.value = 1;
+    iconoVolumen.classList.remove("bi-volume-mute-fill");
+    iconoVolumen.classList.add("bi-volume-up");
+  }
+});
+const tiempoActual = document.getElementById("tiempoActual");
+const tiempoTotal = document.getElementById("tiempoTotal");
+
+function formatoTiempo(segundos) {
+  const minutos = Math.floor(segundos / 60);
+  const seg = Math.floor(segundos % 60);
+  return `${minutos}:${seg < 10 ? "0" + seg : seg}`;
+}
+
+cancion.addEventListener("loadedmetadata", function () {
+  tiempoTotal.textContent = formatoTiempo(cancion.duration);
+});
+
+cancion.addEventListener("timeupdate", function () {
+  tiempoActual.textContent = formatoTiempo(cancion.currentTime);
+});
+
+
 
 
 
