@@ -248,5 +248,48 @@ body {
   color: var(--blanco);
   margin-top: 5px;
 }
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column; /* 🔥 apila verticalmente */
+    align-items: center;
+  }
+
+  .Reproductor-de-musica {
+    width: 95%; /* ocupa casi todo el ancho */
+  }
+
+  .buscador {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .search-container input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--blanco);
+  }
+
+  #songList {
+    margin-top: 10px;
+    max-height: 200px; /* 🔥 scroll si hay muchas canciones */
+    overflow-y: auto;
+    font-size: 0.9rem;
+  }
+}
+
+
 
 
