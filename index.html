@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor mp3</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <!-- Importar iconos de Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor mp3</title>
+  <link rel="stylesheet" href="styles.css"/>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
 
+  <div class="contenedor-principal">
+
+    >
     <section class="Reproductor-de-musica">
-        <h1>Titulo</h1>
-        <p>Nombre</p>
+      <h1>Titulo</h1>
+      <p>Nombre</p>
+
+      <img id="portada" src="img/default.jpg" alt="Portada de la canción" width="200" height="200"/>
+
+      <audio id="cancion">
+        <source src="" type="audio/mpeg"/>
+      </audio>
+      <input type="range" value="0" id="progreso"/>
+
+      
+      <div class="tiempo">
+        <span id="tiempoActual">0:00</span>
+        <span id="tiempoTotal">0:00</span>
+      </div>
 
      
-        <img id="portada" src="img/default.jpg" alt="Portada de la canción" width="200" height="200"/>
+      <div class="volumen">
+        <i id="iconoVolumen" class="bi bi-volume-up"></i>
+        <input type="range" id="controlVolumen" min="0" max="1" step="0.01" value="1">
+      </div>
 
-        <audio id="cancion">
-            <source src="" type="audio/mpeg"/>
-        </audio>
-        <input type="range" value="0" id="progreso"/>
-        
-        <div class="controles">
-            <button type="button" class="atras-control">
-                <i class="bi bi-rewind-fill"></i>
-            </button>
-            <button type="button" class="boton-reproducir-pausar iconoControl">
-                <i class="bi bi-play-fill" id="iconoControl"></i>
-            </button>
-            <button type="button" class="adelante-control">
-                <i class="bi bi-fast-forward-fill"></i>
-            </button>
-        </div>
+      <div class="controles">
+        <button type="button" class="atras-control">
+          <i class="bi bi-rewind-fill"></i>
+        </button>
+        <button type="button" class="boton-reproducir-pausar iconoControl">
+          <i class="bi bi-play-fill" id="iconoControl"></i>
+        </button>
+        <button type="button" class="adelante-control">
+          <i class="bi bi-fast-forward-fill"></i>
+        </button>
+      </div>
     </section>   
+    <div class="buscador">
+      <div class="search-container">
+        <i class="bi bi-search"></i>
+        <input type="text" id="searchInput" placeholder="Buscar canción o autor...">
+      </div>
+      <ul id="songList"></ul>
+    </div>
 
-    <script src="app.js"></script>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
+
 
 
